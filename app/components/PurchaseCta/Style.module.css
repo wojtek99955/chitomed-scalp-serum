@@ -1,0 +1,350 @@
+.purchaseSection {
+  position: relative;
+  padding: clamp(80px, 10vw, 150px) clamp(18px, 4vw, 64px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.22), transparent 28%),
+    radial-gradient(circle at 88% 80%, rgba(255, 255, 255, 0.14), transparent 30%),
+    linear-gradient(135deg, #bf2836 0%, #8f1723 48%, #4e0b11 100%);
+  color: #ffffff;
+}
+
+.backgroundGlow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -180px;
+  top: -180px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+  gap: clamp(34px, 6vw, 90px);
+  align-items: center;
+}
+
+.content {
+  max-width: 680px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 6.8rem);
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+  font-weight: 850;
+}
+
+.content h2 span {
+  color: #ffffff;
+}
+
+.lead {
+  max-width: 620px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: clamp(1rem, 1.3vw, 1.16rem);
+  line-height: 1.75;
+}
+
+.points {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.points div {
+  min-height: 132px;
+  border-radius: 24px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+}
+
+.points strong {
+  display: block;
+  font-size: 1.15rem;
+  letter-spacing: -0.04em;
+}
+
+.points span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.card {
+  position: relative;
+  border-radius: 40px;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.84)),
+    radial-gradient(circle at 50% 20%, rgba(191, 40, 54, 0.18), transparent 38%);
+  color: #080808;
+  box-shadow:
+    0 34px 90px rgba(8, 8, 8, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(191, 40, 54, 0.14), transparent 28%),
+    radial-gradient(circle at 80% 78%, rgba(191, 40, 54, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.cardTop,
+.productInfo,
+.buyButton,
+.note {
+  position: relative;
+  z-index: 2;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.status,
+.badge {
+  border-radius: 999px;
+  padding: 9px 12px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+}
+
+.status {
+  background: #bf2836;
+  color: white;
+}
+
+.badge {
+  background: rgba(8, 8, 8, 0.08);
+  color: rgba(8, 8, 8, 0.7);
+}
+
+.productVisual {
+  position: relative;
+  z-index: 2;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  margin-top: 18px;
+}
+
+.productVisual::before {
+  content: "";
+  position: absolute;
+  width: 310px;
+  height: 310px;
+  border-radius: 999px;
+  border: 1px solid rgba(191, 40, 54, 0.22);
+}
+
+.productVisual::after {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 170px;
+  border-radius: 999px;
+  border: 1px solid rgba(191, 40, 54, 0.16);
+  transform: rotate(-18deg);
+}
+
+.cap {
+  position: absolute;
+  top: 58px;
+  width: 70px;
+  height: 62px;
+  border-radius: 18px 18px 8px 8px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.26), transparent 38%),
+    #101010;
+  box-shadow: 0 14px 28px rgba(8, 8, 8, 0.18);
+  z-index: 3;
+}
+
+.bottle {
+  position: relative;
+  z-index: 2;
+  width: 162px;
+  height: 270px;
+  margin-top: 56px;
+  border-radius: 32px 32px 44px 44px;
+  background:
+    linear-gradient(110deg, rgba(255, 255, 255, 0.46), transparent 28%),
+    linear-gradient(180deg, #bf2836 0%, #941a27 58%, #5d0e15 100%);
+  color: white;
+  box-shadow:
+    0 34px 60px rgba(97, 16, 23, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.bottle small {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.bottle strong {
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.bottle span {
+  font-size: 0.7rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  opacity: 0.74;
+}
+
+.productInfo {
+  text-align: center;
+}
+
+.productInfo p {
+  margin: 0;
+  color: rgba(8, 8, 8, 0.54);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+}
+
+.productInfo h3 {
+  margin: 10px 0 0;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.productInfo span {
+  display: block;
+  margin-top: 10px;
+  color: rgba(8, 8, 8, 0.54);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.buyButton {
+  margin-top: 24px;
+  min-height: 58px;
+  width: 100%;
+  border-radius: 999px;
+  background: #bf2836;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.8rem;
+  font-weight: 950;
+  box-shadow: 0 18px 38px rgba(191, 40, 54, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.buyButton:hover {
+  transform: translateY(-2px);
+  background: #a91f2e;
+  box-shadow: 0 24px 48px rgba(191, 40, 54, 0.38);
+}
+
+.note {
+  margin: 16px 0 0;
+  color: rgba(8, 8, 8, 0.46);
+  font-size: 0.76rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 720px) {
+  .purchaseSection {
+    padding: 76px 18px;
+  }
+
+  .points {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-radius: 32px;
+    padding: 18px;
+  }
+
+  .productVisual {
+    min-height: 320px;
+  }
+
+  .productVisual::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .productVisual::after {
+    width: 300px;
+    height: 140px;
+  }
+
+  .bottle {
+    width: 142px;
+    height: 238px;
+  }
+
+  .bottle strong {
+    font-size: 2.55rem;
+  }
+}

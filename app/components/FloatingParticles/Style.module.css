@@ -1,0 +1,103 @@
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+
+  left: var(--left);
+  top: var(--top);
+
+  width: var(--size);
+  height: var(--size);
+
+  display: block;
+  border-radius: 999px;
+
+  background: radial-gradient(
+    circle,
+    rgba(191, 40, 54, 0.75) 0%,
+    rgba(191, 40, 54, 0.3) 40%,
+    rgba(191, 40, 54, 0.08) 68%,
+    rgba(191, 40, 54, 0) 100%
+  );
+
+  box-shadow:
+    0 0 14px rgba(191, 40, 54, 0.22),
+    0 0 32px rgba(191, 40, 54, 0.12);
+
+  opacity: 0.3;
+  filter: blur(0.3px);
+
+  animation:
+    particleFloat var(--duration) ease-in-out infinite,
+    particlePulse 6s ease-in-out infinite;
+
+  animation-delay: var(--delay);
+}
+
+.particle:nth-child(2n) {
+  opacity: 0.22;
+  filter: blur(1px);
+}
+
+.particle:nth-child(3n) {
+  width: calc(var(--size) * 1.5);
+  height: calc(var(--size) * 1.5);
+  opacity: 0.16;
+  filter: blur(2px);
+}
+
+.particle:nth-child(5n) {
+  opacity: 0.12;
+  filter: blur(3px);
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate3d(var(--drift-x), -50px, 0) scale(1.12);
+  }
+
+  50% {
+    transform: translate3d(calc(var(--drift-x) * -0.7), -110px, 0) scale(0.9);
+  }
+
+  75% {
+    transform: translate3d(var(--drift-x), -170px, 0) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(0, -230px, 0) scale(1);
+  }
+}
+
+@keyframes particlePulse {
+  0%,
+  100% {
+    opacity: 0.12;
+  }
+
+  50% {
+    opacity: 0.42;
+  }
+}
+
+@media (max-width: 768px) {
+  .particle:nth-child(n + 42) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    animation: none;
+  }
+}
