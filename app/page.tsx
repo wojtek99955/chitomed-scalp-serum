@@ -26,28 +26,57 @@ const metrics = [
 ];
 
 const drivers = [
-  "spadek sygnalizacji w obrębie brodawki skórnej",
-  "skrócenie fazy anagenu",
-  "cieńsza łodyga włosa",
-  "osłabione środowisko skóry głowy",
-  "suchość, dyskomfort i nadmiar sebum",
+  {
+    title: "Sygnały w mieszku",
+    text: "spadek aktywności w obrębie brodawki skórnej może wpływać na cykl życia włosa",
+  },
+  {
+    title: "Krótszy anagen",
+    text: "włosy szybciej przechodzą w fazę spoczynku i tracą potencjał długości oraz gęstości",
+  },
+  {
+    title: "Cieńsza łodyga",
+    text: "włos staje się delikatniejszy, mniej sprężysty i wizualnie mniej pełny",
+  },
+  {
+    title: "Skóra głowy",
+    text: "suchość, dyskomfort, sebum i osłabiona bariera wpływają na środowisko wzrostu",
+  },
 ];
 
 const formula = [
   {
     tag: "01",
     title: "Peaureva™",
-    text: "Francuska technologia FGF-2-oleosome fusion. Biomimetyczny czynnik wzrostu FGF-2 połączony z oleosomem roślinnym, zaprojektowany z myślą o skórze głowy i mieszkach włosowych.",
+    text: "Francuska technologia FGF-2-oleosome fusion. Biomimetyczny czynnik wzrostu FGF-2 połączony z oleosomem roślinnym, zaprojektowany z myślą o skórze głowy.",
   },
   {
     tag: "02",
     title: "Chitozan mikrokrystaliczny CHITOMED",
-    text: "Polski biomateriał o dodatnim ładunku, który przyciąga się do skóry i włosów. Tworzy delikatny, bioadhezyjny film i wspiera kontakt składników aktywnych z powierzchnią skóry głowy.",
+    text: "Polski biomateriał o dodatnim ładunku, który przyciąga się do skóry i włosów. Tworzy delikatny, bioadhezyjny film na powierzchni skóry głowy.",
   },
   {
     tag: "03",
-    title: "Serum scalp-first",
-    text: "Formuła nie jest tworzona wyłącznie pod włos. Jej celem jest środowisko skóry głowy — miejsce, w którym zaczyna się jakość, gęstość i kondycja włosa.",
+    title: "Formuła leave-on",
+    text: "Serum bez spłukiwania, stworzone jako codzienny rytuał dla skóry głowy — nie tylko kosmetyczne wygładzenie łodygi włosa.",
+  },
+];
+
+const usage = [
+  {
+    step: "01",
+    title: "Aplikuj na skórę głowy",
+    text: "Nakładaj serum bezpośrednio na skórę głowy, szczególnie w miejscach, gdzie włosy są cieńsze lub mniej gęste.",
+  },
+  {
+    step: "02",
+    title: "Wmasuj opuszkami",
+    text: "Krótki masaż pomaga równomiernie rozprowadzić formułę i zamienić aplikację w codzienny rytuał.",
+  },
+  {
+    step: "03",
+    title: "Nie spłukuj",
+    text: "Pozostaw serum na skórze głowy. Formuła została zaprojektowana jako pielęgnacja leave-on.",
   },
 ];
 
@@ -74,46 +103,61 @@ export default function HairSerumLanding() {
   return (
     <main className={styles.page}>
       <FloatingParticles />
+
       <section className={styles.hero}>
         <div className={styles.heroGlow} />
+        <div className={styles.heroGridPattern} />
 
-        <header className={styles.nav}>
-          <div className={styles.logo}>
-            <span>CHITOMED</span>
-            <small>P.S.A.</small>
+        <header className={styles.headerShell}>
+          <div className={styles.headerInner}>
+            <a
+              href="/"
+              className={styles.logo}
+              aria-label="CHITOMED P.S.A. - strona główna">
+              <span>CHITOMED</span>
+              <small>P.S.A.</small>
+            </a>
+
+            <nav
+              className={styles.navLinks}
+              aria-label="Nawigacja landing page">
+              <a href="#before-after">Efekty</a>
+              <a href="#science">Technologia</a>
+              <a href="#formula">Formuła</a>
+              <a href="#order" className={styles.navCta}>
+                Kup serum
+              </a>
+            </nav>
           </div>
-
-          <nav className={styles.navLinks} aria-label="Nawigacja landing page">
-            <a href="#science">Technologia</a>
-            <a href="#results">Wyniki</a>
-            <a href="#formula">Formuła</a>
-            <a href="#order">Zamów</a>
-          </nav>
         </header>
 
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
-            <p className={styles.eyebrow}>Nowy dermokosmetyk do skóry głowy</p>
+            <div className={styles.ratingPill}>
+              <span>★★★★★</span>
+              <p>Biotechnologiczne serum do skóry głowy</p>
+            </div>
+
+            <p className={styles.eyebrow}>Nowy dermokosmetyk scalp-first</p>
 
             <h1>
-              Rewolucja dla włosów zaczyna się nie od włosa.
-              <span> Zaczyna się od skóry głowy.</span>
+              Gęstsze włosy zaczynają się od skóry głowy.
+              <span> Nie od obietnic.</span>
             </h1>
 
             <p className={styles.lead}>
-              Serum CHITOMED łączy francuską technologię Peaureva™
+              CHITOMED FGF-2 + MCC łączy francuską technologię Peaureva™
               FGF-2-oleosome fusion z polskim chitozanem mikrokrystalicznym. To
-              nowa generacja pielęgnacji scalp-first: biomimetyczna,
-              bioadhezyjna i zaprojektowana dla włosów, które tracą gęstość,
-              grubość i witalność.
+              codzienne serum leave-on dla skóry głowy, włosów przerzedzonych i
+              utraty wizualnej gęstości.
             </p>
 
             <div className={styles.heroActions}>
               <a href="#order" className={styles.primaryBtn}>
-                Dołącz do premiery
+                Kup serum
               </a>
-              <a href="#science" className={styles.secondaryBtn}>
-                Poznaj technologię
+              <a href="#results" className={styles.secondaryBtn}>
+                Zobacz wyniki
               </a>
             </div>
 
@@ -127,38 +171,121 @@ export default function HairSerumLanding() {
 
           <div className={styles.heroVisual} aria-label="Wizualizacja serum">
             <div className={styles.visualCard}>
-              <div className={styles.badge}>Biotech scalp serum</div>
-
-              <div className={styles.bottleWrap}>
-                <div className={styles.bottleCap} />
-                <div className={styles.bottle}>
-                  <span>FGF-2</span>
-                  <strong>MCC</strong>
-                  <small>scalp serum</small>
-                </div>
-                <div className={styles.bottleShadow} />
+              <div className={styles.visualTop}>
+                <span>Scalp serum</span>
+                <strong>FGF-2 + MCC</strong>
               </div>
 
-              <div className={styles.orbitOne} />
-              <div className={styles.orbitTwo} />
-              <div className={styles.particleOne} />
-              <div className={styles.particleTwo} />
-              <div className={styles.particleThree} />
-            </div>
+              <div className={styles.heroBottleStage}>
+                <div className={styles.orbitOne} />
+                <div className={styles.orbitTwo} />
 
-            <div className={styles.heroStat}>
-              <strong>28 dni</strong>
-              <span>
-                pierwsze mierzalne parametry w badaniu składnika Peaureva™
-              </span>
+                <div className={styles.clinicalCard}>
+                  <strong>28 dni</strong>
+                  <span>badanie składnika Peaureva™</span>
+                </div>
+
+                <div className={styles.studyCard}>
+                  <strong>+33,6%</strong>
+                  <span>gęstości włosów</span>
+                </div>
+
+                <div className={styles.bottleWrap}>
+                  <div className={styles.bottleCap} />
+                  <div className={styles.bottle}>
+                    <small>CHITOMED</small>
+                    <strong>FGF-2</strong>
+                    <span>MCC scalp serum</span>
+                  </div>
+                  <div className={styles.bottleShadow} />
+                </div>
+
+                <div className={styles.particleOne} />
+                <div className={styles.particleTwo} />
+                <div className={styles.particleThree} />
+              </div>
+
+              <div className={styles.heroAssurances}>
+                <div>
+                  <span>01</span>
+                  <p>bez minoksydylu</p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <p>formuła leave-on</p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <p>dla skóry głowy</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <section className={styles.beforeAfterSection} id="before-after">
+        <div className={styles.beforeAfterInner}>
+          <div className={styles.beforeAfterIntro}>
+            <p className={styles.eyebrowDark}>Efekty wizualne</p>
+            <h2>
+              Przed & po.
+              <span> Po 28 dniach stosowania.</span>
+            </h2>
+            <p>
+              Przykład zmiany wyglądu skóry głowy i optycznej gęstości włosów po
+              regularnym rytuale serum CHITOMED FGF-2 + MCC.
+            </p>
+          </div>
+
+          <div className={styles.beforeAfterGrid}>
+            <article className={styles.beforeAfterCard}>
+              <div className={styles.imageWrap}>
+                <img
+                  src="https://chitomed-files.b-cdn.net/scalp-serum/before-serum.webp"
+                  alt="Skóra głowy przed stosowaniem serum"
+                />
+                <span className={styles.imageBadge}>Before</span>
+              </div>
+
+              <div className={styles.cardCaption}>
+                <span>Start kuracji</span>
+                <strong>Przed</strong>
+              </div>
+            </article>
+
+            <div className={styles.daysBadge}>
+              <strong>28</strong>
+              <span>dni</span>
+            </div>
+
+            <article
+              className={`${styles.beforeAfterCard} ${styles.afterCard}`}>
+              <div className={styles.imageWrap}>
+                <img
+                  src="https://chitomed-files.b-cdn.net/scalp-serum/after-serum.webp"
+                  alt="Skóra głowy po 28 dniach stosowania serum"
+                />
+                <span className={styles.imageBadge}>After</span>
+              </div>
+
+              <div className={styles.cardCaption}>
+                <span>Po regularnym stosowaniu</span>
+                <strong>Po 28 dniach</strong>
+              </div>
+            </article>
+          </div>
+
+          <p className={styles.beforeAfterNote}>
+            Efekty kosmetyczne mogą różnić się w zależności od kondycji skóry
+            głowy, regularności stosowania i indywidualnych uwarunkowań.
+          </p>
+        </div>
+      </section>
+
       <section className={styles.metricsSection} id="results">
         <div className={styles.sectionIntro}>
-          <p className={styles.eyebrowDark}>Dane składnika aktywnego</p>
+          <p className={styles.eyebrowDark}>Składnik aktywny</p>
           <h2>
             Technologia, która podnosi oczekiwania wobec serum do skóry głowy.
           </h2>
@@ -176,6 +303,7 @@ export default function HairSerumLanding() {
                 index === 0 ? styles.metricCardFeatured : ""
               }`}
               key={item.label}>
+              <span>Study result</span>
               <strong>{item.value}</strong>
               <h3>{item.label}</h3>
               <p>{item.note}</p>
@@ -192,32 +320,34 @@ export default function HairSerumLanding() {
 
       <section className={styles.problemSection}>
         <div className={styles.problemContent}>
-          <p className={styles.eyebrowDark}>Problem</p>
-          <h2>Przerzedzenie włosów to nie tylko „słaby włos”.</h2>
+          <p className={styles.eyebrowDark}>Dlaczego scalp-first?</p>
+          <h2>Przerzedzenie włosów to nie tylko problem włosa.</h2>
           <p>
-            Włosy stają się cieńsze, krótsze i mniej gęste, gdy zmienia się
-            środowisko skóry głowy: faza wzrostu, sygnalizacja komórkowa,
-            bariera naskórkowa, poziom nawilżenia i sebum.
+            Włosy stają się cieńsze, krótsze i mniej gęste, gdy zmienia się ich
+            środowisko: faza wzrostu, bariera skóry głowy, poziom nawilżenia,
+            sebum i sygnalizacja w obrębie mieszka włosowego.
           </p>
         </div>
 
         <div className={styles.driverList}>
           {drivers.map((driver) => (
-            <div className={styles.driverItem} key={driver}>
+            <article className={styles.driverItem} key={driver.title}>
               <span />
-              <p>{driver}</p>
-            </div>
+              <div>
+                <strong>{driver.title}</strong>
+                <p>{driver.text}</p>
+              </div>
+            </article>
           ))}
         </div>
       </section>
 
       <section className={styles.scienceSection} id="science">
         <div className={styles.scienceHeader}>
-          <p className={styles.eyebrow}>Dlaczego to jest inne</p>
+          <p className={styles.eyebrow}>Technologia</p>
           <h2>
             Francuska biotechnologia wzrostu.
-            <br />
-            Polska technologia biomateriałowa.
+            <span> Polska technologia biomateriałowa.</span>
           </h2>
         </div>
 
@@ -248,7 +378,7 @@ export default function HairSerumLanding() {
             <p>
               Chitozan mikrokrystaliczny CHITOMED ma dodatni ładunek, dlatego
               przyciąga się do skóry i włosów, tworząc delikatny film, który
-              wspiera komfort i kontakt składników aktywnych ze skórą.
+              wspiera kontakt składników aktywnych ze skórą.
             </p>
           </article>
         </div>
@@ -257,11 +387,11 @@ export default function HairSerumLanding() {
       <section className={styles.formulaSection} id="formula">
         <div className={styles.formulaIntro}>
           <p className={styles.eyebrowDark}>Formuła</p>
-          <h2>Dwa światy. Jedna technologia skóry głowy.</h2>
+          <h2>Trzy filary jednego serum.</h2>
           <p>
-            Serum zostało pomyślane jako połączenie aktywnej biotechnologii i
-            biomateriałowej matrycy. Peaureva™ daje sygnał. MCC pomaga stworzyć
-            środowisko, w którym formuła dobrze przylega do skóry głowy.
+            Serum zostało pomyślane jako połączenie aktywnej biotechnologii,
+            biomateriałowej matrycy i wygodnego codziennego rytuału dla skóry
+            głowy.
           </p>
         </div>
 
@@ -279,7 +409,7 @@ export default function HairSerumLanding() {
       <section className={styles.compareSection}>
         <div className={styles.compareHeader}>
           <p className={styles.eyebrowDark}>Porównanie</p>
-          <h2>Nie kolejna wcierka. Nowy standard serum do skóry głowy.</h2>
+          <h2>Nie kolejna wcierka. Bardziej zaawansowane serum scalp-first.</h2>
         </div>
 
         <div className={styles.compareGrid}>
@@ -288,15 +418,13 @@ export default function HairSerumLanding() {
             <ul>
               <li>oparta głównie na ekstraktach lub kofeinie</li>
               <li>często skupiona na uczuciu chłodzenia lub rozgrzania</li>
-              <li>
-                marketing „na porost”, bez głębszej narracji technologicznej
-              </li>
               <li>krótkotrwałe uczucie świeżości</li>
+              <li>komunikacja bez głębszej narracji technologicznej</li>
             </ul>
           </article>
 
           <article className={styles.compareActive}>
-            <h3>Serum CHITOMED FGF-2 + MCC</h3>
+            <h3>CHITOMED FGF-2 + MCC</h3>
             <ul>
               <li>biomimetyczny FGF-2 w technologii oleosome fusion</li>
               <li>chitozan mikrokrystaliczny jako bioadhezyjny biomateriał</li>
@@ -339,38 +467,19 @@ export default function HairSerumLanding() {
       </section>
 
       <section className={styles.usageSection}>
-        <div>
+        <div className={styles.usageIntro}>
           <p className={styles.eyebrowDark}>Rytuał</p>
           <h2>Jak stosować?</h2>
         </div>
 
         <div className={styles.usageSteps}>
-          <article>
-            <span>1</span>
-            <h3>Na skórę głowy</h3>
-            <p>
-              Aplikuj serum bezpośrednio na skórę głowy, szczególnie w
-              miejscach, gdzie włosy są cieńsze lub mniej gęste.
-            </p>
-          </article>
-
-          <article>
-            <span>2</span>
-            <h3>Codzienna konsekwencja</h3>
-            <p>
-              W pielęgnacji skóry głowy regularność jest ważniejsza niż ilość.
-              Najlepszy efekt komunikacyjny daje rytuał minimum 28 dni.
-            </p>
-          </article>
-
-          <article>
-            <span>3</span>
-            <h3>Bez spłukiwania</h3>
-            <p>
-              Wmasuj opuszkami palców i pozostaw. Formuła została zaprojektowana
-              jako serum leave-on do skóry głowy.
-            </p>
-          </article>
+          {usage.map((item) => (
+            <article key={item.title}>
+              <span>{item.step}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -396,7 +505,7 @@ export default function HairSerumLanding() {
         <p className={styles.eyebrow}>CHITOMED scalp biotechnology</p>
         <h2>Przyszłość pielęgnacji włosów będzie biologiczna.</h2>
         <a href="#order" className={styles.primaryBtn}>
-          Chcę być na liście premiery
+          Zamów serum
         </a>
       </section>
 

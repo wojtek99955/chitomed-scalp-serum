@@ -101,3 +101,37 @@
     animation: none;
   }
 }
+
+.particle {
+  position: absolute;
+
+  left: var(--left);
+  top: var(--top);
+
+  width: var(--size);
+  height: var(--size);
+
+  display: block;
+  border-radius: 999px;
+
+  background: radial-gradient(
+    circle,
+    rgba(49, 83, 63, 0.65) 0%,
+    rgba(49, 83, 63, 0.26) 40%,
+    rgba(49, 83, 63, 0.08) 68%,
+    rgba(49, 83, 63, 0) 100%
+  );
+
+  box-shadow:
+    0 0 14px rgba(49, 83, 63, 0.2),
+    0 0 32px rgba(49, 83, 63, 0.1);
+
+  opacity: 0.26;
+  filter: blur(0.2px);
+
+  animation:
+    particleFloat var(--duration) ease-in-out infinite,
+    particlePulse 3.5s ease-in-out infinite;
+
+  animation-delay: var(--delay);
+}
