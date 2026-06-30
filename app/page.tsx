@@ -245,7 +245,7 @@ export default function HairSerumLanding() {
                   src="https://chitomed-files.b-cdn.net/scalp-serum/before-serum.webp"
                   alt="Skóra głowy przed stosowaniem serum"
                 />
-                <span className={styles.imageBadge}>Before</span>
+                <span className={styles.imageBadge}>Przed</span>
               </div>
 
               <div className={styles.cardCaption}>
@@ -266,7 +266,7 @@ export default function HairSerumLanding() {
                   src="https://chitomed-files.b-cdn.net/scalp-serum/after-serum.webp"
                   alt="Skóra głowy po 28 dniach stosowania serum"
                 />
-                <span className={styles.imageBadge}>After</span>
+                <span className={styles.imageBadge}>Po</span>
               </div>
 
               <div className={styles.cardCaption}>
