@@ -409,7 +409,7 @@ export default function HairSerumLanding() {
       <section className={styles.compareSection}>
         <div className={styles.compareHeader}>
           <p className={styles.eyebrowDark}>Porównanie</p>
-          <h2>Nie kolejna wcierka. Bardziej zaawansowane serum scalp-first.</h2>
+          <h2>Nie kolejna wcierka. Biotechnologiczne wsparcie skóry głowy i wzrostu włosów.</h2>
         </div>
 
         <div className={styles.compareGrid}>
