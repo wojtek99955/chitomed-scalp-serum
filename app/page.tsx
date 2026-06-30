@@ -503,7 +503,7 @@ export default function HairSerumLanding() {
 
       <section className={styles.finalCta}>
         <p className={styles.eyebrow}>CHITOMED scalp biotechnology</p>
-        <h2>Przyszłość pielęgnacji włosów będzie biologiczna.</h2>
+        <h2>Nie maskuj problemu. Zacznij działać u źródła.</h2>{" "}
         <a href="#order" className={styles.primaryBtn}>
           Zamów serum
         </a>
