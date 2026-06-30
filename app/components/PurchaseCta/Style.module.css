@@ -3,9 +3,9 @@
   padding: clamp(76px, 10vw, 140px) clamp(18px, 4vw, 64px);
   overflow: hidden;
   background:
-    radial-gradient(circle at 14% 14%, rgba(49, 83, 63, 0.14), transparent 30%),
-    radial-gradient(circle at 90% 22%, rgba(223, 233, 223, 0.8), transparent 34%),
-    linear-gradient(135deg, #fbfaf5 0%, #f4f0e7 54%, #eaf1e6 100%);
+    radial-gradient(circle at 18% 14%, rgba(223, 233, 223, 0.16), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(255, 255, 255, 0.13), transparent 34%),
+    linear-gradient(135deg, #102018 0%, #1f382b 54%, #07100b 100%);
   color: #111713;
 }
 
@@ -16,7 +16,7 @@
   width: 620px;
   height: 620px;
   border-radius: 999px;
-  background: rgba(49, 83, 63, 0.16);
+  background: rgba(223, 233, 223, 0.16);
   filter: blur(34px);
   pointer-events: none;
 }
@@ -25,8 +25,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(49, 83, 63, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(49, 83, 63, 0.055) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
   pointer-events: none;
@@ -38,7 +38,7 @@
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.98fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(410px, 1.08fr);
   gap: clamp(24px, 4vw, 54px);
   align-items: stretch;
 }
@@ -46,18 +46,18 @@
 .visualPanel,
 .buyPanel {
   border-radius: clamp(28px, 4vw, 46px);
-  border: 1px solid rgba(49, 83, 63, 0.12);
-  box-shadow: 0 28px 90px rgba(17, 23, 19, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.22);
 }
 
 .visualPanel {
-  position: relative;
-  min-height: 680px;
+  position: sticky;
+  height: fit-content;
   overflow: hidden;
   padding: clamp(18px, 3vw, 30px);
   background:
-    radial-gradient(circle at 50% 38%, rgba(49, 83, 63, 0.18), transparent 32%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgba(239, 245, 236, 0.88));
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.13), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(223, 233, 223, 0.08));
 }
 
 .visualPanel::before {
@@ -65,7 +65,7 @@
   position: absolute;
   inset: 18px;
   border-radius: 34px;
-  border: 1px solid rgba(49, 83, 63, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.11);
   pointer-events: none;
 }
 
@@ -90,14 +90,14 @@
 }
 
 .visualHeader span {
-  background: rgba(255, 255, 255, 0.72);
-  color: rgba(31, 56, 43, 0.75);
-  border: 1px solid rgba(49, 83, 63, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .visualHeader strong {
-  background: #31533f;
-  color: white;
+  background: #fbfaf5;
+  color: #31533f;
 }
 
 .productStage {
@@ -220,8 +220,8 @@
   width: min(210px, 42%);
   border-radius: 26px;
   padding: 18px;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(14px);
   box-shadow: 0 22px 60px rgba(17, 23, 19, 0.1);
 }
@@ -265,13 +265,13 @@
 .bottomSpecs div {
   border-radius: 22px;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(49, 83, 63, 0.09);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.11);
 }
 
 .bottomSpecs span {
   display: block;
-  color: rgba(49, 83, 63, 0.55);
+  color: rgba(255, 255, 255, 0.46);
   font-size: 0.66rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -279,7 +279,7 @@
 
 .bottomSpecs p {
   margin: 8px 0 0;
-  color: rgba(17, 23, 19, 0.72);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 0.78rem;
   line-height: 1.35;
   font-weight: 750;
@@ -287,11 +287,12 @@
 
 .buyPanel {
   position: relative;
-  padding: clamp(22px, 3.2vw, 38px);
+  padding: clamp(24px, 3.6vw, 46px);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 253, 247, 0.92)),
-    radial-gradient(circle at 90% 6%, rgba(49, 83, 63, 0.1), transparent 26%);
+    radial-gradient(circle at 90% 6%, rgba(49, 83, 63, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(251, 250, 245, 0.94));
   align-self: center;
+  border-color: rgba(255, 255, 255, 0.9);
 }
 
 .ratingLine {
@@ -327,9 +328,9 @@
 .buyPanel h2 {
   margin: 0;
   max-width: 560px;
-  font-size: clamp(2.55rem, 5vw, 5rem);
-  line-height: 0.9;
-  letter-spacing: -0.075em;
+  font-size: clamp(2.55rem, 5vw, 5.15rem);
+  line-height: 0.92;
+  letter-spacing: 0;
   font-weight: 900;
 }
 
@@ -345,10 +346,45 @@
   line-height: 1.72;
 }
 
+.quickFacts {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.quickFacts div {
+  min-height: 98px;
+  border-radius: 24px;
+  padding: 16px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(49, 83, 63, 0.12), transparent 34%),
+    rgba(49, 83, 63, 0.055);
+  border: 1px solid rgba(49, 83, 63, 0.1);
+}
+
+.quickFacts strong {
+  display: block;
+  color: #31533f;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 950;
+}
+
+.quickFacts span {
+  display: block;
+  margin-top: 9px;
+  color: rgba(17, 23, 19, 0.58);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  font-weight: 820;
+}
+
 .choiceBox {
   margin-top: 28px;
   border-radius: 28px;
-  padding: 18px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -433,7 +469,7 @@
 
 .buyButton {
   margin-top: 24px;
-  min-height: 62px;
+  min-height: 68px;
   width: 100%;
   border-radius: 999px;
   background: #31533f;
@@ -444,9 +480,11 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   font-weight: 950;
-  box-shadow: 0 20px 42px rgba(49, 83, 63, 0.26);
+  box-shadow:
+    0 22px 48px rgba(49, 83, 63, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
   transition:
     transform 0.22s ease,
     box-shadow 0.22s ease,
@@ -470,7 +508,8 @@
   min-height: 58px;
   border-radius: 18px;
   padding: 12px 10px;
-  background: rgba(49, 83, 63, 0.065);
+  background: rgba(49, 83, 63, 0.075);
+  border: 1px solid rgba(49, 83, 63, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -600,7 +639,8 @@
   }
 
   .bottomSpecs,
-  .assuranceGrid {
+  .assuranceGrid,
+  .quickFacts {
     grid-template-columns: 1fr;
   }
 
@@ -619,6 +659,10 @@
 
   .choiceBox b {
     align-self: flex-start;
+  }
+
+  .quickFacts div {
+    min-height: auto;
   }
 }
 

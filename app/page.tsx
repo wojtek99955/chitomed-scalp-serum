@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import FloatingParticles from "./components/FloatingParticles/FloatingParticles";
 import ProductPurchaseCTA from "./components/PurchaseCta/PurchaseCta";
 import styles from "./hair.module.css";
@@ -41,6 +43,47 @@ const drivers = [
   {
     title: "Skóra głowy",
     text: "suchość, dyskomfort, sebum i osłabiona bariera wpływają na środowisko wzrostu",
+  },
+];
+
+const innovationFeatures = [
+  {
+    label: "Biomimetyka",
+    title: "FGF-2 w technologii oleosome fusion",
+    text: "Aktyw komunikowany jak technologia, nie modny ekstrakt. Peaureva™ łączy FGF-2 z roślinnym oleosomem dla formuły zaprojektowanej z myślą o skórze głowy.",
+  },
+  {
+    label: "Bioadhezja",
+    title: "MCC CHITOMED jako inteligentna matryca",
+    text: "Chitozan mikrokrystaliczny wspiera kontakt serum ze skórą i włosami, tworząc delikatny film bez ciężkiego, tłustego wykończenia.",
+  },
+  {
+    label: "Scalp-first",
+    title: "Rytuał u źródła przerzedzenia",
+    text: "Serum działa tam, gdzie zaczyna się kondycja włosów: przy skórze głowy, mieszku włosowym, barierze i mikrośrodowisku wzrostu.",
+  },
+  {
+    label: "Leave-on",
+    title: "Codzienna aplikacja bez spłukiwania",
+    text: "Formuła pasuje do regularnego rytuału: precyzyjna aplikacja, krótki masaż i pozostawienie serum na skórze głowy.",
+  },
+];
+
+const funnelSteps = [
+  {
+    step: "01",
+    title: "Rozpoznaj sygnał",
+    text: "mniej gęsta linia włosów, cieńsze pasma, sezonowe osłabienie",
+  },
+  {
+    step: "02",
+    title: "Działaj przy skórze",
+    text: "codzienny rytuał bez spłukiwania ukierunkowany na środowisko wzrostu",
+  },
+  {
+    step: "03",
+    title: "Monitoruj postęp",
+    text: "pierwsze parametry składnika Peaureva™ oceniano po 28 dniach",
   },
 ];
 
@@ -110,18 +153,19 @@ export default function HairSerumLanding() {
 
         <header className={styles.headerShell}>
           <div className={styles.headerInner}>
-            <a
+            <Link
               href="/"
               className={styles.logo}
               aria-label="CHITOMED P.S.A. - strona główna">
               <span>CHITOMED</span>
               <small>P.S.A.</small>
-            </a>
+            </Link>
 
             <nav
               className={styles.navLinks}
               aria-label="Nawigacja landing page">
               <a href="#before-after">Efekty</a>
+              <a href="#innovation">Innowacja</a>
               <a href="#science">Technologia</a>
               <a href="#formula">Formuła</a>
               <a href="#order" className={styles.navCta}>
@@ -133,23 +177,24 @@ export default function HairSerumLanding() {
 
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
-            <div className={styles.ratingPill}>
-              <span>★★★★★</span>
-              <p>Biotechnologiczne serum do skóry głowy</p>
-            </div>
-
             <p className={styles.eyebrow}>Nowy dermokosmetyk scalp-first</p>
 
             <h1>
-              Gęstsze włosy zaczynają się od skóry głowy.
-              <span> Nie od obietnic.</span>
+              Innowacyjne serum na porost i gęstość włosów.
+              <span> Zaprojektowane od skóry głowy.</span>
             </h1>
+
+            <div className={styles.ratingPill}>
+              <span>★★★★★</span>
+              <p>Biotechnologiczna formuła FGF-2 + MCC</p>
+            </div>
 
             <p className={styles.lead}>
               CHITOMED FGF-2 + MCC łączy francuską technologię Peaureva™
-              FGF-2-oleosome fusion z polskim chitozanem mikrokrystalicznym. To
-              codzienne serum leave-on dla skóry głowy, włosów przerzedzonych i
-              utraty wizualnej gęstości.
+              FGF-2-oleosome fusion z polskim chitozanem mikrokrystalicznym.
+              To codzienne serum bez spłukiwania stworzone dla osób, które chcą
+              działać u źródła: przy skórze głowy, mieszku włosowym i widocznej
+              gęstości fryzury.
             </p>
 
             <div className={styles.heroActions}>
@@ -161,12 +206,32 @@ export default function HairSerumLanding() {
               </a>
             </div>
 
+            <div className={styles.heroProofGrid} aria-label="Najważniejsze cechy produktu">
+              <div>
+                <strong>+33,6%</strong>
+                <span>gęstości włosów w badaniu składnika</span>
+              </div>
+              <div>
+                <strong>28 dni</strong>
+                <span>pierwsze mierzalne parametry Peaureva™</span>
+              </div>
+              <div>
+                <strong>0%</strong>
+                <span>minoksydylu w formule kosmetycznej</span>
+              </div>
+            </div>
+
             <div className={styles.trustLine}>
               <span>Peaureva™</span>
               <span>FGF-2</span>
               <span>Oleosomes</span>
               <span>MCC CHITOMED</span>
             </div>
+
+            <p className={styles.heroMicrocopy}>
+              Profesjonalny rytuał dla skóry głowy: aplikacja punktowa,
+              szybki masaż, formuła bez spłukiwania.
+            </p>
           </div>
 
           <div className={styles.heroVisual} aria-label="Wizualizacja serum">
@@ -179,6 +244,7 @@ export default function HairSerumLanding() {
               <div className={styles.heroBottleStage}>
                 <div className={styles.orbitOne} />
                 <div className={styles.orbitTwo} />
+                <div className={styles.productHalo} />
 
                 <div className={styles.clinicalCard}>
                   <strong>28 dni</strong>
@@ -188,6 +254,11 @@ export default function HairSerumLanding() {
                 <div className={styles.studyCard}>
                   <strong>+33,6%</strong>
                   <span>gęstości włosów</span>
+                </div>
+
+                <div className={styles.techPlate}>
+                  <span>Bioadhezyjna matryca</span>
+                  <strong>MCC</strong>
                 </div>
 
                 <div className={styles.bottleWrap}>
@@ -212,7 +283,7 @@ export default function HairSerumLanding() {
                 </div>
                 <div>
                   <span>02</span>
-                  <p>formuła leave-on</p>
+                  <p>formuła bez spłukiwania</p>
                 </div>
                 <div>
                   <span>03</span>
@@ -220,6 +291,46 @@ export default function HairSerumLanding() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className={styles.heroFunnel} aria-label="Ścieżka działania serum">
+          {funnelSteps.map((item) => (
+            <article key={item.step}>
+              <span>{item.step}</span>
+              <div>
+                <h2>{item.title}</h2>
+                <p>{item.text}</p>
+              </div>
+            </article>
+          ))}
+          <a href="#order">Rozpocznij rytuał</a>
+        </div>
+      </section>
+
+      <section className={styles.innovationSection} id="innovation">
+        <div className={styles.innovationShell}>
+          <div className={styles.innovationIntro}>
+            <p className={styles.eyebrowDark}>Innowacja</p>
+            <h2>
+              Od pierwszego scrolla ma być jasne:
+              <span> to nie jest zwykła wcierka.</span>
+            </h2>
+            <p>
+              Sekcja pokazuje mechanizm w prostym języku: technologia,
+              bioadhezja, codzienny rytuał i powód, dla którego serum działa u
+              źródła wizualnej gęstości włosów.
+            </p>
+          </div>
+
+          <div className={styles.innovationGrid}>
+            {innovationFeatures.map((feature) => (
+              <article className={styles.innovationCard} key={feature.title}>
+                <span>{feature.label}</span>
+                <h3>{feature.title}</h3>
+                <p>{feature.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -409,7 +520,10 @@ export default function HairSerumLanding() {
       <section className={styles.compareSection}>
         <div className={styles.compareHeader}>
           <p className={styles.eyebrowDark}>Porównanie</p>
-          <h2>Nie kolejna wcierka. Biotechnologiczne wsparcie skóry głowy i wzrostu włosów.</h2>
+          <h2>
+            Nie kolejna wcierka. Biotechnologiczne wsparcie skóry głowy i
+            wzrostu włosów.
+          </h2>
         </div>
 
         <div className={styles.compareGrid}>

@@ -25,6 +25,21 @@ const assurances = [
   "Dla skóry głowy",
 ];
 
+const quickFacts = [
+  {
+    value: "28 dni",
+    label: "pierwsze parametry składnika",
+  },
+  {
+    value: "+33,6%",
+    label: "gęstości włosów",
+  },
+  {
+    value: "leave-on",
+    label: "bez spłukiwania",
+  },
+];
+
 export default function ProductPurchaseCTA({
   productUrl,
 }: ProductPurchaseCTAProps) {
@@ -102,6 +117,15 @@ export default function ProductPurchaseCTA({
             Peaureva™ połączona z polskim chitozanem mikrokrystalicznym
             CHITOMED.
           </p>
+
+          <div className={styles.quickFacts} aria-label="Szybkie podsumowanie produktu">
+            {quickFacts.map((fact) => (
+              <div key={fact.value}>
+                <strong>{fact.value}</strong>
+                <span>{fact.label}</span>
+              </div>
+            ))}
+          </div>
 
           <div className={styles.choiceBox}>
             <div>
