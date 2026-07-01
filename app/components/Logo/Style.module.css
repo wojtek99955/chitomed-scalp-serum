@@ -1,11 +1,22 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  color: black;
   font-size: clamp(2.4rem, 6vw, 1.4rem);
   font-weight: 700;
   line-height: 0.9;
   letter-spacing: -0.04em;
   text-transform: lowercase;
   text-decoration: none;
+}
+
+.green {
+  color: #1a4d2e;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #000000;
 }

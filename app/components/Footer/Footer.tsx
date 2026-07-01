@@ -1,3 +1,4 @@
+import Logo from "../Logo/Logo";
 import styles from "./Style.module.css";
 
 const footerLinks = [
@@ -50,8 +51,7 @@ const Footer = () => {
               href="/"
               className={styles.footerLogo}
               aria-label="CHITOMED P.S.A.">
-              <span>CHITOMED</span>
-              <small>P.S.A.</small>
+              <span><Logo variant="white"/></span>
             </a>
 
             <p>
