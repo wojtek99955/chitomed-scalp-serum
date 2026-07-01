@@ -1,0 +1,101 @@
+
+
+.finalCta h2 {
+  margin: 0;
+  font-size: clamp(2.35rem, 4.7vw, 5.1rem);
+  line-height: 0.94;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+.finalCta {
+  position: relative;
+  padding: clamp(80px, 10vw, 150px) clamp(18px, 4vw, 64px);
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(111, 145, 111, 0.18), transparent 35%),
+    linear-gradient(135deg, #102018 0%, #1f382b 55%, #07100b 100%);
+  color: white;
+}
+
+.finalCta .eyebrow {
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.finalCta h2 {
+  max-width: 840px;
+  margin: 0 auto 32px;
+}
+
+.footer {
+  position: relative;
+  padding: 26px clamp(18px, 4vw, 64px);
+  background: #07100b;
+  color: rgba(255, 255, 255, 0.56);
+  text-align: center;
+}
+
+.footer p {
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 25px;
+  font-size: 0.76rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.primaryBtn {
+  background: var(--green);
+  color: white;
+  box-shadow: 0 20px 44px rgba(49, 83, 63, 0.24);
+}
+
+ .eyebrowDark {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+   .sectionIntro .eyebrowDark,
+  .innovationIntro .eyebrowDark,
+  .formulaIntro .eyebrowDark,
+  .compareHeader .eyebrowDark,
+  .faqIntro .eyebrowDark {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .eyebrow,
+.eyebrowDark {
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 10px 13px;
+  border-radius: 999px;
+  background: rgba(49, 83, 63, 0.08);
+  color: var(--green);
+  border: 1px solid rgba(49, 83, 63, 0.1);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 950;
+}

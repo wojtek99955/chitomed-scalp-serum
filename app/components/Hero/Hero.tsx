@@ -31,7 +31,7 @@ const Hero = () => {
               Kup serum
             </a>
             <a href="#results" className={styles.secondaryBtn}>
-              Zobacz wyniki
+              Zobacz rezultat
             </a>
           </div>
 

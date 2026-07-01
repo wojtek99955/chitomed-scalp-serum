@@ -5,6 +5,10 @@ import ProductPurchaseCTA from "./components/PurchaseCta/PurchaseCta";
 import styles from "./hair.module.css";
 import Hero from "./components/Hero/Hero";
 import Header from "./components/Header/Header";
+import Results from "./components/Results/Results";
+import FAQ from "./components/FAQ/FAQ";
+import Footer from "./components/Footer/Footer";
+import Ingredient from "./components/Ingredient/Ingredient";
 
 const metrics = [
   {
@@ -107,24 +111,7 @@ const usage = [
   },
 ];
 
-const faq = [
-  {
-    q: "Czy to jest lek na łysienie?",
-    a: "Nie. To zaawansowany dermokosmetyk do skóry głowy. Nie zastępuje diagnostyki ani leczenia dermatologicznego, ale może być elementem świadomej pielęgnacji skóry głowy i włosów przerzedzonych.",
-  },
-  {
-    q: "Dla kogo jest to serum?",
-    a: "Dla osób, które widzą spadek gęstości, cieńsze włosy, osłabienie po stresie, sezonowe wypadanie, suchość skóry głowy albo potrzebują bardziej zaawansowanej pielęgnacji niż klasyczna wcierka.",
-  },
-  {
-    q: "Czym różni się od zwykłej wcierki?",
-    a: "Klasyczna wcierka zwykle opiera się na ekstraktach, kofeinie lub składnikach rozgrzewających. Tutaj komunikujemy technologię biomimetyczną: Peaureva™ z FGF-2 na oleosomach oraz MCC CHITOMED jako bioadhezyjną matrycę.",
-  },
-  {
-    q: "Kiedy można oczekiwać pierwszych efektów?",
-    a: "W badaniu składnika Peaureva™ parametry gęstości, stosunku anagen/telogen, grubości włosa i nawilżenia skóry głowy oceniano już po 28 dniach. Indywidualne efekty kosmetyku zależą od skóry głowy, regularności i przyczyny przerzedzenia.",
-  },
-];
+
 
 export default function HairSerumLanding() {
   return (
@@ -132,6 +119,7 @@ export default function HairSerumLanding() {
       <FloatingParticles />
       <Header />
       <Hero />
+      <Results/>
 
       <section className={styles.innovationSection} id="innovation">
         <div className={styles.innovationShell}>
@@ -160,99 +148,7 @@ export default function HairSerumLanding() {
         </div>
       </section>
 
-      <section className={styles.beforeAfterSection} id="before-after">
-        <div className={styles.beforeAfterInner}>
-          <div className={styles.beforeAfterIntro}>
-            <p className={styles.eyebrowDark}>Efekty wizualne</p>
-            <h2>
-              Przed & po.
-              <span> Po 28 dniach stosowania.</span>
-            </h2>
-            <p>
-              Przykład zmiany wyglądu skóry głowy i optycznej gęstości włosów po
-              regularnym rytuale serum CHITOMED FGF-2 + MCC.
-            </p>
-          </div>
-
-          <div className={styles.beforeAfterGrid}>
-            <article className={styles.beforeAfterCard}>
-              <div className={styles.imageWrap}>
-                <img
-                  src="https://chitomed-files.b-cdn.net/scalp-serum/before-serum.webp"
-                  alt="Skóra głowy przed stosowaniem serum"
-                />
-                <span className={styles.imageBadge}>Przed</span>
-              </div>
-
-              <div className={styles.cardCaption}>
-                <span>Start kuracji</span>
-                <strong>Przed</strong>
-              </div>
-            </article>
-
-            <div className={styles.daysBadge}>
-              <strong>28</strong>
-              <span>dni</span>
-            </div>
-
-            <article
-              className={`${styles.beforeAfterCard} ${styles.afterCard}`}>
-              <div className={styles.imageWrap}>
-                <img
-                  src="https://chitomed-files.b-cdn.net/scalp-serum/after-serum.webp"
-                  alt="Skóra głowy po 28 dniach stosowania serum"
-                />
-                <span className={styles.imageBadge}>Po</span>
-              </div>
-
-              <div className={styles.cardCaption}>
-                <span>Po regularnym stosowaniu</span>
-                <strong>Po 28 dniach</strong>
-              </div>
-            </article>
-          </div>
-
-          <p className={styles.beforeAfterNote}>
-            Efekty kosmetyczne mogą różnić się w zależności od kondycji skóry
-            głowy, regularności stosowania i indywidualnych uwarunkowań.
-          </p>
-        </div>
-      </section>
-
-      <section className={styles.metricsSection} id="results">
-        <div className={styles.sectionIntro}>
-          <p className={styles.eyebrowDark}>Składnik aktywny</p>
-          <h2>
-            Technologia, która podnosi oczekiwania wobec serum do skóry głowy.
-          </h2>
-          <p>
-            Peaureva™ została oceniona w badaniu placebo-controlled.
-            Najważniejsze parametry włosów i skóry głowy oceniano
-            instrumentalnie już po 28 dniach stosowania formuły z aktywem.
-          </p>
-        </div>
-
-        <div className={styles.metricsGrid}>
-          {metrics.map((item, index) => (
-            <article
-              className={`${styles.metricCard} ${
-                index === 0 ? styles.metricCardFeatured : ""
-              }`}
-              key={item.label}>
-              <span>Study result</span>
-              <strong>{item.value}</strong>
-              <h3>{item.label}</h3>
-              <p>{item.note}</p>
-            </article>
-          ))}
-        </div>
-
-        <p className={styles.disclaimer}>
-          Dane dotyczą badania składnika Peaureva™ / formuły testowej. Finalne
-          działanie gotowego kosmetyku zależy od pełnej receptury, regularności
-          stosowania i indywidualnej kondycji skóry głowy.
-        </p>
-      </section>
+      <Ingredient/>
 
       <section className={styles.problemSection}>
         <div className={styles.problemContent}>
@@ -424,37 +320,8 @@ export default function HairSerumLanding() {
 
       <ProductPurchaseCTA productUrl="/pl/p/serum-chitomed-fgf-2-mcc" />
 
-      <section className={styles.faqSection}>
-        <div className={styles.faqIntro}>
-          <p className={styles.eyebrowDark}>FAQ</p>
-          <h2>Najczęstsze pytania</h2>
-        </div>
-
-        <div className={styles.faqList}>
-          {faq.map((item) => (
-            <details className={styles.faqItem} key={item.q}>
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      <section className={styles.finalCta}>
-        <p className={styles.eyebrow}>CHITOMED scalp biotechnology</p>
-        <h2>Nie maskuj problemu. Zacznij działać u źródła.</h2>{" "}
-        <a href="#order" className={styles.primaryBtn}>
-          Zamów serum
-        </a>
-      </section>
-
-      <footer className={styles.footer}>
-        <p>
-          Produkt kosmetyczny. Materiały mają charakter informacyjny i
-          marketingowy. Serum nie jest produktem leczniczym i nie zastępuje
-          konsultacji z dermatologiem.
-        </p>
-      </footer>
+<FAQ/>
+      <Footer/>
     </main>
   );
 }

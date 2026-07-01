@@ -1,0 +1,184 @@
+.metricsSection,
+.problemSection,
+.innovationSection,
+.formulaSection,
+.compareSection,
+.brandSection,
+.usageSection,
+.faqSection {
+  position: relative;
+  padding: clamp(72px, 9vw, 124px) clamp(18px, 4vw, 64px);
+}
+
+.metricsSection {
+  /* background:
+    radial-gradient(circle at 12% 12%, rgba(49, 83, 63, 0.08), transparent 30%),
+    #fbfaf5; */
+  background-color: white;
+}
+.metricsSection,
+.problemSection,
+.innovationSection,
+.formulaSection,
+.compareSection,
+.brandSection,
+.usageSection,
+.faqSection {
+  padding: 70px 18px;
+}
+
+.sectionIntro,
+.innovationIntro,
+.formulaIntro,
+.compareHeader,
+.faqIntro {
+  max-width: 820px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.eyebrow,
+.eyebrowDark {
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 10px 13px;
+  border-radius: 999px;
+  background: rgba(49, 83, 63, 0.08);
+  color: var(--green);
+  border: 1px solid rgba(49, 83, 63, 0.1);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 950;
+}
+
+.eyebrowDark {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.metricsGrid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.metricCard {
+  min-height: 292px;
+  border-radius: 34px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(49, 83, 63, 0.1);
+  box-shadow: 0 22px 70px rgba(17, 23, 19, 0.045);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(49, 83, 63, 0.18);
+  box-shadow: 0 28px 80px rgba(17, 23, 19, 0.075);
+}
+
+.metricCardFeatured {
+  color: white;
+  background:
+    radial-gradient(
+      circle at 80% 12%,
+      rgba(255, 255, 255, 0.18),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #31533f 0%, #1f382b 100%);
+}
+
+.metricCard > span {
+  display: inline-flex;
+  margin-bottom: 34px;
+  border-radius: 999px;
+  padding: 8px 10px;
+  background: rgba(49, 83, 63, 0.08);
+  color: rgba(49, 83, 63, 0.76);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 950;
+}
+
+.metricCardFeatured > span {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.metricCard strong {
+  display: block;
+  color: var(--green);
+  font-size: clamp(2.6rem, 4.4vw, 4.7rem);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+}
+
+.metricCardFeatured strong {
+  color: white;
+}
+
+.metricCard h3 {
+  margin: 24px 0 0;
+  font-size: 1.14rem;
+  letter-spacing: -0.04em;
+}
+
+.metricCard p {
+  margin: 14px 0 0;
+  color: rgba(17, 23, 19, 0.58);
+  line-height: 1.55;
+}
+
+.metricCardFeatured p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.disclaimer {
+  max-width: 920px;
+  margin: 28px auto 0;
+  padding: 18px 22px;
+  border-radius: 24px;
+  background: rgba(49, 83, 63, 0.055);
+  border: 1px solid rgba(49, 83, 63, 0.08);
+  color: rgba(17, 23, 19, 0.5);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.sectionIntro h2,
+.innovationIntro h2,
+.problemContent h2,
+.scienceHeader h2,
+.formulaIntro h2,
+.compareHeader h2,
+.brandContent h2,
+.usageIntro h2,
+.faqIntro h2,
+.finalCta h2 {
+  margin: 0;
+  font-size: clamp(2.35rem, 4.7vw, 5.1rem);
+  line-height: 0.94;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+
+@media (max-width: 1050px) {
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}
