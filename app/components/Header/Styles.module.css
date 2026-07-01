@@ -1,12 +1,11 @@
 .headerShell {
+  position: fixed;
   left: 0;
   right: 0;
   top: 1rem;
   z-index: 1000;
-  /* padding: 0 clamp(14px, 4vw, 40px); */
   pointer-events: none;
-  margin-bottom: 1rem;
-  position: fixed;
+  padding: 0 clamp(14px, 4vw, 40px);
 }
 
 .headerInner {
@@ -16,35 +15,63 @@
   margin: 0 auto;
   padding: 8px 10px 8px 18px;
   border-radius: 999px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 22px;
+
   overflow: hidden;
   pointer-events: auto;
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(49, 83, 63, 0.12);
+
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
   box-shadow:
-    0 22px 70px rgba(17, 23, 19, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.93);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  background-color: white;
+    0 22px 70px rgba(17, 23, 19, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+
+  isolation: isolate;  backdrop-filter: blur(10px);
+
 }
 
 .headerInner::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* background:
-    radial-gradient(circle at 12% 50%, rgba(49, 83, 63, 0.08), transparent 28%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.42), transparent 48%);
-  pointer-events: none; */
+  z-index: 0;
+
+  background: rgba(255, 255, 255, 0.32);
+/* 
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px) saturate(180%); */
+
+  pointer-events: none;
+}
+
+.headerInner::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0.12)
+    );
+}
+
+.logo,
+.navLinks {
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
-  position: relative;
-  z-index: 2;
   display: inline-flex;
   align-items: baseline;
   gap: 8px;
@@ -65,14 +92,12 @@
 }
 
 .navLinks {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
   gap: 4px;
   padding: 4px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.35);
   border: 1px solid rgba(49, 83, 63, 0.08);
 }
 
@@ -80,15 +105,18 @@
   min-height: 42px;
   padding: 0 15px;
   border-radius: 999px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   color: rgba(17, 23, 19, 0.68);
   text-decoration: none;
   font-size: 0.72rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.09em;
+
   transition:
     background 0.2s ease,
     color 0.2s ease,
@@ -122,6 +150,12 @@
   .headerInner {
     min-height: 60px;
     padding: 8px 8px 8px 14px;
+  }
+
+  .headerInner::before {
+    background: rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(22px) saturate(170%);
+    -webkit-backdrop-filter: blur(22px) saturate(170%);
   }
 
   .navLinks a:not(.navCta) {
