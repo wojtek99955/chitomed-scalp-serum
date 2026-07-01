@@ -3,6 +3,8 @@ import Link from "next/link";
 import FloatingParticles from "./components/FloatingParticles/FloatingParticles";
 import ProductPurchaseCTA from "./components/PurchaseCta/PurchaseCta";
 import styles from "./hair.module.css";
+import Hero from "./components/Hero/Hero";
+import Header from "./components/Header/Header";
 
 const metrics = [
   {
@@ -69,24 +71,6 @@ const innovationFeatures = [
   },
 ];
 
-const funnelSteps = [
-  {
-    step: "01",
-    title: "Rozpoznaj sygnał",
-    text: "mniej gęsta linia włosów, cieńsze pasma, sezonowe osłabienie",
-  },
-  {
-    step: "02",
-    title: "Działaj przy skórze",
-    text: "codzienny rytuał bez spłukiwania ukierunkowany na środowisko wzrostu",
-  },
-  {
-    step: "03",
-    title: "Monitoruj postęp",
-    text: "pierwsze parametry składnika Peaureva™ oceniano po 28 dniach",
-  },
-];
-
 const formula = [
   {
     tag: "01",
@@ -146,167 +130,8 @@ export default function HairSerumLanding() {
   return (
     <main className={styles.page}>
       <FloatingParticles />
-
-      <section className={styles.hero}>
-        <div className={styles.heroGlow} />
-        <div className={styles.heroGridPattern} />
-
-        <header className={styles.headerShell}>
-          <div className={styles.headerInner}>
-            <Link
-              href="/"
-              className={styles.logo}
-              aria-label="CHITOMED P.S.A. - strona główna">
-              <span>CHITOMED</span>
-              <small>P.S.A.</small>
-            </Link>
-
-            <nav
-              className={styles.navLinks}
-              aria-label="Nawigacja landing page">
-              <a href="#before-after">Efekty</a>
-              <a href="#innovation">Innowacja</a>
-              <a href="#science">Technologia</a>
-              <a href="#formula">Formuła</a>
-              <a href="#order" className={styles.navCta}>
-                Kup serum
-              </a>
-            </nav>
-          </div>
-        </header>
-
-        <div className={styles.heroGrid}>
-          <div className={styles.heroContent}>
-            <p className={styles.eyebrow}>Nowy dermokosmetyk scalp-first</p>
-
-            <h1>
-              Innowacyjne serum na porost i gęstość włosów.
-              <span> Zaprojektowane od skóry głowy.</span>
-            </h1>
-
-            <div className={styles.ratingPill}>
-              <span>★★★★★</span>
-              <p>Biotechnologiczna formuła FGF-2 + MCC</p>
-            </div>
-
-            <p className={styles.lead}>
-              CHITOMED FGF-2 + MCC łączy francuską technologię Peaureva™
-              FGF-2-oleosome fusion z polskim chitozanem mikrokrystalicznym.
-              To codzienne serum bez spłukiwania stworzone dla osób, które chcą
-              działać u źródła: przy skórze głowy, mieszku włosowym i widocznej
-              gęstości fryzury.
-            </p>
-
-            <div className={styles.heroActions}>
-              <a href="#order" className={styles.primaryBtn}>
-                Kup serum
-              </a>
-              <a href="#results" className={styles.secondaryBtn}>
-                Zobacz wyniki
-              </a>
-            </div>
-
-            <div className={styles.heroProofGrid} aria-label="Najważniejsze cechy produktu">
-              <div>
-                <strong>+33,6%</strong>
-                <span>gęstości włosów w badaniu składnika</span>
-              </div>
-              <div>
-                <strong>28 dni</strong>
-                <span>pierwsze mierzalne parametry Peaureva™</span>
-              </div>
-              <div>
-                <strong>0%</strong>
-                <span>minoksydylu w formule kosmetycznej</span>
-              </div>
-            </div>
-
-            <div className={styles.trustLine}>
-              <span>Peaureva™</span>
-              <span>FGF-2</span>
-              <span>Oleosomes</span>
-              <span>MCC CHITOMED</span>
-            </div>
-
-            <p className={styles.heroMicrocopy}>
-              Profesjonalny rytuał dla skóry głowy: aplikacja punktowa,
-              szybki masaż, formuła bez spłukiwania.
-            </p>
-          </div>
-
-          <div className={styles.heroVisual} aria-label="Wizualizacja serum">
-            <div className={styles.visualCard}>
-              <div className={styles.visualTop}>
-                <span>Scalp serum</span>
-                <strong>FGF-2 + MCC</strong>
-              </div>
-
-              <div className={styles.heroBottleStage}>
-                <div className={styles.orbitOne} />
-                <div className={styles.orbitTwo} />
-                <div className={styles.productHalo} />
-
-                <div className={styles.clinicalCard}>
-                  <strong>28 dni</strong>
-                  <span>badanie składnika Peaureva™</span>
-                </div>
-
-                <div className={styles.studyCard}>
-                  <strong>+33,6%</strong>
-                  <span>gęstości włosów</span>
-                </div>
-
-                <div className={styles.techPlate}>
-                  <span>Bioadhezyjna matryca</span>
-                  <strong>MCC</strong>
-                </div>
-
-                <div className={styles.bottleWrap}>
-                  <div className={styles.bottleCap} />
-                  <div className={styles.bottle}>
-                    <small>CHITOMED</small>
-                    <strong>FGF-2</strong>
-                    <span>MCC scalp serum</span>
-                  </div>
-                  <div className={styles.bottleShadow} />
-                </div>
-
-                <div className={styles.particleOne} />
-                <div className={styles.particleTwo} />
-                <div className={styles.particleThree} />
-              </div>
-
-              <div className={styles.heroAssurances}>
-                <div>
-                  <span>01</span>
-                  <p>bez minoksydylu</p>
-                </div>
-                <div>
-                  <span>02</span>
-                  <p>formuła bez spłukiwania</p>
-                </div>
-                <div>
-                  <span>03</span>
-                  <p>dla skóry głowy</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.heroFunnel} aria-label="Ścieżka działania serum">
-          {funnelSteps.map((item) => (
-            <article key={item.step}>
-              <span>{item.step}</span>
-              <div>
-                <h2>{item.title}</h2>
-                <p>{item.text}</p>
-              </div>
-            </article>
-          ))}
-          <a href="#order">Rozpocznij rytuał</a>
-        </div>
-      </section>
+      <Header />
+      <Hero />
 
       <section className={styles.innovationSection} id="innovation">
         <div className={styles.innovationShell}>
