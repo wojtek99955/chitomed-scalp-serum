@@ -1,48 +1,90 @@
-
-
-.finalCta h2 {
-  margin: 0;
-  font-size: clamp(2.35rem, 4.7vw, 5.1rem);
-  line-height: 0.94;
-  letter-spacing: 0;
-  font-weight: 900;
+.footerWrap {
+  position: relative;
+  background: #07100b;
 }
+
 .finalCta {
   position: relative;
-  padding: clamp(80px, 10vw, 150px) clamp(18px, 4vw, 64px);
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(86px, 10vw, 150px) clamp(18px, 4vw, 64px);
   text-align: center;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(111, 145, 111, 0.18), transparent 35%),
-    linear-gradient(135deg, #102018 0%, #1f382b 55%, #07100b 100%);
   color: white;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(111, 145, 111, 0.24), transparent 36%),
+    radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.07), transparent 28%),
+    linear-gradient(135deg, #102018 0%, #1f382b 54%, #07100b 100%);
 }
 
-.finalCta .eyebrow {
-  margin-left: auto;
-  margin-right: auto;
+.finalGlow {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: -180px;
+  width: min(760px, 90vw);
+  height: min(760px, 90vw);
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(111, 145, 111, 0.18);
+  filter: blur(58px);
+  pointer-events: none;
+}
+
+.finalCta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 74px 74px;
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+  pointer-events: none;
+}
+
+.finalCtaInner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  width: fit-content;
+  margin: 0 auto 18px;
+  padding: 10px 13px;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.72);
-  border-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 950;
 }
 
 .finalCta h2 {
-  max-width: 840px;
-  margin: 0 auto 32px;
-}
-
-.footer {
-  position: relative;
-  padding: 26px clamp(18px, 4vw, 64px);
-  background: #07100b;
-  color: rgba(255, 255, 255, 0.56);
-  text-align: center;
-}
-
-.footer p {
-  max-width: 980px;
+  max-width: 880px;
   margin: 0 auto;
-  font-size: 0.78rem;
-  line-height: 1.6;
+  font-size: clamp(2.45rem, 5.2vw, 5.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 950;
+}
+
+.finalLead {
+  max-width: 720px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(0.98rem, 1.3vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.finalActions {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .primaryBtn,
@@ -66,36 +108,331 @@
 }
 
 .primaryBtn {
-  background: var(--green);
-  color: white;
-  box-shadow: 0 20px 44px rgba(49, 83, 63, 0.24);
+  background: #ffffff;
+  color: #102018;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
 }
 
- .eyebrowDark {
-    margin-left: 0;
-    margin-right: 0;
-  }
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  background: #edf4ed;
+  box-shadow: 0 28px 58px rgba(0, 0, 0, 0.3);
+}
 
-   .sectionIntro .eyebrowDark,
-  .innovationIntro .eyebrowDark,
-  .formulaIntro .eyebrowDark,
-  .compareHeader .eyebrowDark,
-  .faqIntro .eyebrowDark {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.secondaryBtn {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
 
-  .eyebrow,
-.eyebrowDark {
-  width: fit-content;
-  margin: 0 0 18px;
-  padding: 10px 13px;
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.26);
+}
+
+.finalTrust {
+  max-width: 720px;
+  margin: 28px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.finalTrust span {
   border-radius: 999px;
-  background: rgba(49, 83, 63, 0.08);
-  color: var(--green);
-  border: 1px solid rgba(49, 83, 63, 0.1);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.footer {
+  position: relative;
+  padding: 0 clamp(18px, 4vw, 64px) 28px;
+  background: #07100b;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.footerInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(34px, 5vw, 58px) 0;
+  display: grid;
+  grid-template-columns: 1.15fr 0.62fr 0.9fr 1.15fr;
+  gap: clamp(24px, 4vw, 54px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerBrand {
+  max-width: 360px;
+}
+
+.footerLogo {
+  width: fit-content;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.08em;
   font-weight: 950;
+}
+
+.footerLogo span {
+  font-size: 1rem;
+}
+
+.footerLogo small {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 0.62rem;
+}
+
+.footerBrand p,
+.newsletterBox p {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.footerBadges {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footerBadges span {
+  border-radius: 999px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.68rem;
+  font-weight: 850;
+}
+
+.footerColumn h3,
+.newsletterBox h3 {
+  margin: 0 0 16px;
+  color: white;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 950;
+}
+
+.footerNav {
+  display: grid;
+  gap: 11px;
+}
+
+.footerNav a,
+.legalLinks a {
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  font-size: 0.84rem;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footerNav a:hover,
+.legalLinks a:hover {
+  color: white;
+}
+
+.companyData {
+  display: grid;
+  gap: 8px;
+  font-style: normal;
+}
+
+.companyData strong {
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.companyData span {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.newsletterBox {
+  padding: 22px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(111, 145, 111, 0.18), transparent 36%),
+    rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.newsletterBox p {
+  margin-top: 0;
+}
+
+.newsletterForm {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsletterForm input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: white;
+  padding: 0 12px;
+  font-size: 0.84rem;
+}
+
+.newsletterForm input::placeholder {
+  color: rgba(255, 255, 255, 0.44);
+}
+
+.newsletterForm button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 16px;
+  cursor: pointer;
+  background: white;
+  color: #102018;
+  font-size: 0.68rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.newsletterForm button:hover {
+  transform: translateY(-1px);
+  background: #edf4ed;
+}
+
+.newsletterBox small {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.footerBottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.footerBottom p {
+  max-width: 780px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 1050px) {
+  .footerInner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footerBrand {
+    max-width: none;
+  }
+
+  .newsletterBox {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .finalCta {
+    padding: 82px 18px;
+  }
+
+  .finalCta h2 {
+    font-size: clamp(2.45rem, 13vw, 4.2rem);
+  }
+
+  .finalActions {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 0 18px 24px;
+  }
+
+  .footerInner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .newsletterForm {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+    padding: 8px;
+  }
+
+  .newsletterForm input {
+    min-height: 42px;
+    padding: 0 10px;
+  }
+
+  .newsletterForm button {
+    width: 100%;
+  }
+
+  .footerBottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .legalLinks {
+    white-space: normal;
+  }
 }
