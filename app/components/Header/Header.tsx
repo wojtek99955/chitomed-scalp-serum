@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Styles.module.css";
+import Logo from "../Logo/Logo";
 
 const Header = () => {
   return (
@@ -9,8 +10,7 @@ const Header = () => {
           href="/"
           className={styles.logo}
           aria-label="CHITOMED P.S.A. - strona główna">
-          <span>CHITOMED</span>
-          <small>P.S.A.</small>
+            <Logo/>
         </Link>
         <nav className={styles.navLinks} aria-label="Nawigacja landing page">
           <a href="#before-after">Efekty</a>
