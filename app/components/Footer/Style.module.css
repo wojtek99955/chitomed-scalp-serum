@@ -164,7 +164,6 @@
   display: grid;
   grid-template-columns: 1.15fr 0.62fr 0.9fr 1.15fr;
   gap: clamp(24px, 4vw, 54px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footerBrand {
