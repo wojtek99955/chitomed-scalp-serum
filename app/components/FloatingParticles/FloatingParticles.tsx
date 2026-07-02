@@ -1,11 +1,11 @@
 import type { CSSProperties } from "react";
 import styles from "./Style.module.css";
 
-const particles = Array.from({ length: 150 }, (_, index) => {
+const particles = Array.from({ length: 280 }, (_, index) => {
   const size = 4 + (index % 7) * 2;
   const left = (index * 37) % 100;
   const top = (index * 61) % 100;
-  const duration = 6 + (index % 12) * 2;
+  const duration = 10 + (index % 12) * 2;
   const delay = index * -0.45;
   const driftX = index % 2 === 0 ? 42 : -42;
 
