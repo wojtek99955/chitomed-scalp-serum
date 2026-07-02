@@ -1,5 +1,9 @@
 import styles from "./Styles.module.css";
-import Link from "next/link";
+import Image from "next/image";
+
+const serumBottleImage =
+  "https://chitomed-files.b-cdn.net/scalp-serum/scalp-serum-mockup.png";
+
 const Hero = () => {
   return (
     <section className={styles.hero}>
@@ -71,12 +75,13 @@ const Hero = () => {
               </div>
 
               <div className={styles.bottleWrap}>
-                <div className={styles.bottleCap} />
-                <div className={styles.bottle}>
-                  <small>CHITOMED</small>
-                  <strong>FGF-2</strong>
-                  <span>MCC scalp serum</span>
-                </div>
+                <Image
+                  className={styles.productImage}
+                  src={serumBottleImage}
+                  alt="Butelka serum CHITOMED FGF-2 + MCC"
+                  fill
+                  sizes="(max-width: 720px) 220px, 350px"
+                />
                 <div className={styles.bottleShadow} />
               </div>
 

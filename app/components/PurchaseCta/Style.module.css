@@ -128,86 +128,29 @@
   transform: translate(-50%, -50%) rotate(23deg);
 }
 
-.dropper {
+.productMockup {
   position: relative;
   z-index: 3;
   display: grid;
   justify-items: center;
+  width: 420px;
+  height: 390px;
   margin-top: 34px;
   transform: rotate(-2deg);
 }
 
-.dropperTop {
-  width: 72px;
-  height: 64px;
-  border-radius: 24px 24px 12px 12px;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.24), transparent 44%),
-    #111713;
-  box-shadow: 0 16px 28px rgba(17, 23, 19, 0.18);
-}
-
-.dropperNeck {
-  width: 42px;
-  height: 30px;
-  margin-top: -2px;
-  border-radius: 0 0 10px 10px;
-  background: #1b1f1c;
-}
-
-.bottle {
-  width: 178px;
-  height: 310px;
-  border-radius: 36px 36px 48px 48px;
-  background:
-    linear-gradient(110deg, rgba(255, 255, 255, 0.46), transparent 28%),
-    linear-gradient(180deg, #456f55 0%, #31533f 58%, #1f382b 100%);
-  box-shadow:
-    0 44px 82px rgba(31, 56, 43, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.42);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: white;
-}
-
-.bottleLabel {
-  width: 126px;
-  min-height: 160px;
-  border-radius: 24px;
-  padding: 20px 12px;
-  display: grid;
-  align-content: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.bottleLabel small {
-  font-size: 0.66rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.72;
-}
-
-.bottleLabel strong {
-  font-size: 3.05rem;
-  line-height: 0.9;
-  letter-spacing: -0.08em;
-}
-
-.bottleLabel span {
-  font-size: 0.66rem;
-  line-height: 1.25;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  opacity: 0.76;
+.productImage {
+  object-fit: contain;
+  filter: drop-shadow(0 38px 42px rgba(0, 0, 0, 0.22));
 }
 
 .shadow {
   width: 210px;
   height: 28px;
-  margin-top: 28px;
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
   border-radius: 999px;
   background: rgba(17, 23, 19, 0.18);
   filter: blur(10px);
@@ -590,28 +533,9 @@
     height: 160px;
   }
 
-  .bottle {
-    width: 146px;
-    height: 255px;
-  }
-
-  .bottleLabel {
-    width: 106px;
-    min-height: 136px;
-  }
-
-  .bottleLabel strong {
-    font-size: 2.45rem;
-  }
-
-  .dropperTop {
-    width: 62px;
-    height: 54px;
-  }
-
-  .dropperNeck {
-    width: 36px;
-    height: 25px;
+  .productMockup {
+    width: 350px;
+    height: 380px;
   }
 
   .statCard,

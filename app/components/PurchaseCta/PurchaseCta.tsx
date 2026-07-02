@@ -1,8 +1,12 @@
 import styles from "./Style.module.css";
+import Image from "next/image";
 
 type ProductPurchaseCTAProps = {
   productUrl: string;
 };
+
+const serumBottleImage =
+  "https://chitomed-files.b-cdn.net/scalp-serum/scalp-serum-mockup.png";
 
 const benefits = [
   {
@@ -69,16 +73,14 @@ export default function ProductPurchaseCTA({
               <p>gęstości włosów</p>
             </div>
 
-            <div className={styles.dropper}>
-              <div className={styles.dropperTop} />
-              <div className={styles.dropperNeck} />
-              <div className={styles.bottle}>
-                <div className={styles.bottleLabel}>
-                  <small>CHITOMED</small>
-                  <strong>FGF-2</strong>
-                  <span>MCC scalp serum</span>
-                </div>
-              </div>
+            <div className={styles.productMockup}>
+              <Image
+                className={styles.productImage}
+                src={serumBottleImage}
+                alt="Butelka serum CHITOMED FGF-2 + MCC"
+                fill
+                sizes="(max-width: 720px) 190px, 340px"
+              />
               <div className={styles.shadow} />
             </div>
           </div>

@@ -423,67 +423,27 @@
 
 .bottleWrap {
   position: relative;
-  z-index: 3;
+  z-index: 100;
   display: grid;
   justify-items: center;
+  width: 380px;
+  height: 380px;
   margin-top: 20px;
-  transform: rotate(-2deg);
+  transform: rotate(3deg);
 }
 
-.bottleCap {
-  width: 72px;
-  height: 64px;
-  border-radius: 22px 22px 10px 10px;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.25), transparent 42%), #111713;
-  box-shadow: 0 16px 28px rgba(17, 23, 19, 0.18);
-}
-
-.bottle {
-  width: 176px;
-  height: 306px;
-  border-radius: 36px 36px 48px 48px;
-  background:
-    linear-gradient(110deg, rgba(255, 255, 255, 0.46), transparent 28%),
-    linear-gradient(180deg, #456f55 0%, #31533f 58%, #1f382b 100%);
-  box-shadow:
-    0 44px 82px rgba(31, 56, 43, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.42);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  color: white;
-  text-align: center;
-}
-
-.bottle small {
-  font-size: 0.66rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.72;
-}
-
-.bottle strong {
-  font-size: 3.05rem;
-  line-height: 0.9;
-  letter-spacing: -0.08em;
-}
-
-.bottle span {
-  max-width: 110px;
-  font-size: 0.66rem;
-  line-height: 1.25;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  opacity: 0.76;
+.productImage {
+  object-fit: contain;
+  filter: drop-shadow(0 38px 42px rgba(31, 56, 43, 0.26));
 }
 
 .bottleShadow {
   width: 210px;
   height: 28px;
-  margin-top: 28px;
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
   border-radius: 999px;
   background: rgba(17, 23, 19, 0.18);
   filter: blur(10px);
@@ -659,18 +619,9 @@
     height: 160px;
   }
 
-  .bottle {
-    width: 146px;
-    height: 255px;
-  }
-
-  .bottle strong {
-    font-size: 2.45rem;
-  }
-
-  .bottleCap {
-    width: 62px;
-    height: 54px;
+  .bottleWrap {
+    width: 320px;
+    height: 320px;
   }
 
   .clinicalCard,
