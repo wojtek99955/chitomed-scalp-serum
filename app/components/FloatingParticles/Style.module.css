@@ -91,9 +91,9 @@
 }
 
 @media (max-width: 768px) {
-  .particle:nth-child(n + 42) {
+  /* .particle:nth-child(n + 42) {
     display: none;
-  }
+  } */
 }
 
 @media (prefers-reduced-motion: reduce) {

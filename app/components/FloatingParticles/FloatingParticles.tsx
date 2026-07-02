@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import styles from "./Style.module.css";
 
 const particles = Array.from({ length: 280 }, (_, index) => {
-  const size = 4 + (index % 7) * 2;
+  const size = 2 + (index % 7) * 2;
   const left = (index * 37) % 100;
   const top = (index * 61) % 100;
   const duration = 10 + (index % 12) * 2;
